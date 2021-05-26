@@ -1,0 +1,13 @@
+<div class="row item">
+  <div class="col-12 tag"><span>Name:</span> {{ name }}</div>
+  <div class="col-12 tag"><span>Model:</span> {{ model }}</div>
+  <div class="col-12 tag"><span>Color:</span> {{ getTheColor("Blue") }}</div>
+  <div class="col-12 tag"><span>Date:</span> {{ date() }}</div>
+  <div class="col-12 tag">
+    <a [href]="linkto" [target]="target">See more</a>
+    <hr />
+    <a href="{{ linkto }}" target="{{ target }}">See mo!</a>
+    <hr />
+    <input type="text" [disabled]="disabled" />
+  </div>
+</div>
