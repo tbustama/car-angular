@@ -12,7 +12,8 @@ export class CarComponent implements OnInit {
   color: string = 'Black';
   linkto: string = '/to/car/view';
   target: string = '_blank';
-  disabled: boolean = true;
+  disabled: boolean = false;
+  theDate = Date.now();
 
   getTheColor(color: string) {
     if (color !== 'default') {
@@ -24,13 +25,12 @@ export class CarComponent implements OnInit {
   }
 
   date() {
-    return Date.now();
+    return this.theDate;
   }
 
   constructor() {
     setTimeout(() => {
       this.target = '_self';
-      this.disabled = !this.disabled;
     }, 2000);
   }
 
