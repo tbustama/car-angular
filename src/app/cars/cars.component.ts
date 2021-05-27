@@ -7,6 +7,12 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None,
 })
 export class CarsComponent implements OnInit {
+  carValues: { name: string; model: string; color: string } = {
+    name: 'Ford',
+    model: 'F-150',
+    color: 'Space Grey',
+  };
+
   constructor() {}
 
   ngOnInit(): void {}

@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
 
 @Component({
   selector: 'app-car',
@@ -7,32 +7,22 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None,
 })
 export class CarComponent implements OnInit {
-  name: string = 'Ford';
-  model: string = 'F-150';
-  color: string = 'Black';
-  linkto: string = '/to/car/view';
-  target: string = '_blank';
-  disabled: boolean = false;
-  theDate = Date.now();
+  @Input('carElements') carValues: {
+    name: string;
+    model: string;
+    color: string;
+  };
 
   getTheColor(color: string) {
     if (color !== 'default') {
-      this.color = color;
-      return this.color;
+      this.carValues.color = color;
+      return this.carValues.color;
     } else {
-      return this.color;
+      return (this.carValues.color = 'Black');
     }
   }
 
-  date() {
-    return this.theDate;
-  }
-
-  constructor() {
-    setTimeout(() => {
-      this.target = '_self';
-    }, 2000);
-  }
+  constructor() {}
 
   ngOnInit(): void {}
 }
