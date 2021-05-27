@@ -11,17 +11,17 @@ export class AddComponent implements OnInit {
   model: string;
   color: string;
 
-  onAddName(event: Event) {
-    this.name = (<HTMLInputElement>event.target).value;
-  }
+  // onAddName(event: Event) {
+  //   this.name = (<HTMLInputElement>event.target).value;
+  // }
 
-  onAddModel(event: Event) {
-    this.model = (<HTMLInputElement>event.target).value;
-  }
+  // onAddModel(event: Event) {
+  //   this.model = (<HTMLInputElement>event.target).value;
+  // }
 
-  onAddColor(event: Event) {
-    this.color = (<HTMLInputElement>event.target).value;
-  }
+  // onAddColor(event: Event) {
+  //   this.color = (<HTMLInputElement>event.target).value;
+  // }
 
   onSubmitCar() {
     console.log(this.name);
