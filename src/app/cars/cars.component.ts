@@ -1,4 +1,11 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ViewEncapsulation,
+  ViewChild,
+  ElementRef,
+  AfterViewInit,
+} from '@angular/core';
 
 @Component({
   selector: 'app-cars',
@@ -6,8 +13,12 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   styleUrls: ['./cars.component.css'],
   encapsulation: ViewEncapsulation.None,
 })
-export class CarsComponent implements OnInit {
-  carValues: { name: string; model: string; color: string } = {
+export class CarsComponent implements OnInit, AfterViewInit {
+  @ViewChild('anotherDiv', { static: true }) anotherDiv: ElementRef;
+
+  @ViewChild('carComponent', { static: true }) carComponent: Component;
+
+  carValue: { name: string; model: string; color: string } = {
     name: 'Ford',
     model: 'F-150',
     color: 'Space Grey',
@@ -23,5 +34,12 @@ export class CarsComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    // console.log(this.anotherDiv.nativeElement);
+    // console.log(this.carComponent.carValues);
+  }
+
+  ngAfterViewInit(): void {
+    console.log(this.carComponent);
+  }
 }

@@ -1,5 +1,6 @@
 <div class="row">
   <div>
+    <input type="text" class="form-control" #idRef />
     <label for="">Add a name</label>
     <input type="text" class="form-control" [(ngModel)]="userData.name" />
     <label for="">Add a model</label>
@@ -9,11 +10,15 @@
 
     <hr />
 
-    <button class="btn btn-primary" (click)="onSubmitCar()">Add a car</button>
+    <button class="btn btn-primary" (click)="onSubmitCar(idRef)">
+      Add a car
+    </button>
 
     <div>{{ userData.name }}</div>
     <div>{{ userData.model }}</div>
     <div>{{ userData.color }}</div>
+
+    <ng-content></ng-content>
   </div>
   <!-- <div
     (click)="alertOnClick($event)"

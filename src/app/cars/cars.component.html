@@ -1,9 +1,15 @@
 <div class="col-xs-12">
   <h2>The cars:</h2>
-  <app-car [carElements]="carValues"></app-car>
+  <app-car [carElements]="carValue" #carComponent></app-car>
+
+  <div #anotherDiv>Print me out!</div>
   <hr />
   <app-add
     (title)="titleCatch($event)"
     (carSubmitted)="carWasSubmitted($event)"
-  ></app-add>
+  >
+    <div>
+      <span>Hello I am a span</span>
+    </div>
+  </app-add>
 </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
 
 @Component({
   selector: 'app-add',
@@ -19,8 +19,9 @@ export class AddComponent implements OnInit {
     color: '',
   };
 
-  onSubmitCar() {
+  onSubmitCar(ref) {
     this.carSubmitted.emit(this.userData);
+    console.log(ref.value);
   }
   constructor() {}
 
