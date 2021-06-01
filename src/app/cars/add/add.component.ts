@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-add',
@@ -6,17 +6,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add.component.css'],
 })
 export class AddComponent implements OnInit {
-  status: string = 'status of the mouse';
-  name: string;
-  model: string;
-  color: string;
+  @Output() title = new EventEmitter<{ titles: string }>();
+  @Output() carSubmitted = new EventEmitter<{
+    name: string;
+    model: string;
+    color: string;
+  }>();
+
+  userData: { name: string; model: string; color: string } = {
+    name: '',
+    model: '',
+    color: '',
+  };
 
   onSubmitCar() {
-    console.log(this.name);
-    console.log(this.model);
-    console.log(this.color);
+    this.carSubmitted.emit(this.userData);
   }
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.title.emit({ titles: 'This is the car title' });
+  }
 }

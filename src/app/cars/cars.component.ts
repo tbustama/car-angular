@@ -13,6 +13,14 @@ export class CarsComponent implements OnInit {
     color: 'Space Grey',
   };
 
+  carWasSubmitted(carData: { name: string; color: string; model: string }) {
+    console.log(carData);
+  }
+
+  titleCatch(title: { titles: string }) {
+    console.log(title);
+  }
+
   constructor() {}
 
   ngOnInit(): void {}

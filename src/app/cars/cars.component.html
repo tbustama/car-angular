@@ -2,5 +2,8 @@
   <h2>The cars:</h2>
   <app-car [carElements]="carValues"></app-car>
   <hr />
-  <app-add></app-add>
+  <app-add
+    (title)="titleCatch($event)"
+    (carSubmitted)="carWasSubmitted($event)"
+  ></app-add>
 </div>
