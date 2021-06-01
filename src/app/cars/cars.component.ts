@@ -14,6 +14,7 @@ import {
   encapsulation: ViewEncapsulation.None,
 })
 export class CarsComponent implements OnInit, AfterViewInit {
+  contentValue: string = 'This is the content Value!';
   @ViewChild('anotherDiv', { static: true }) anotherDiv: ElementRef;
 
   @ViewChild('carComponent', { static: true }) carComponent: Component;

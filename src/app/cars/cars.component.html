@@ -8,8 +8,8 @@
     (title)="titleCatch($event)"
     (carSubmitted)="carWasSubmitted($event)"
   >
-    <div>
-      <span>Hello I am a span</span>
+    <div #contentApp>
+      <span>Hello I am a span -- {{ contentValue }}</span>
     </div>
   </app-add>
 </div>

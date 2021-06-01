@@ -2,5 +2,17 @@
   <app-header></app-header>
 </header>
 <div class="container">
-  <app-cars></app-cars>
+  <div class="row">
+    <app-cars></app-cars>
+  </div>
+
+  <hr />
+  <div class="row">
+    <app-life [artist]="artist"></app-life>
+    <div class="col-xs-12">
+      <button class="btn btn-primary" (click)="changeArtist()">
+        Change Artist
+      </button>
+    </div>
+  </div>
 </div>

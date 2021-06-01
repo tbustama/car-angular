@@ -7,6 +7,7 @@ import { CarsComponent } from './cars/cars.component';
 import { CarComponent } from './cars/car/car.component';
 import { HeaderComponent } from './header/header.component';
 import { AddComponent } from './cars/add/add.component';
+import { LifeComponent } from './life/life.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { AddComponent } from './cars/add/add.component';
     CarComponent,
     HeaderComponent,
     AddComponent,
+    LifeComponent,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],
