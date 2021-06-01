@@ -32,7 +32,7 @@ export class AddComponent implements OnInit, AfterContentInit {
 
   onSubmitCar(ref) {
     this.carSubmitted.emit(this.userData);
-    console.log(ref.value);
+    // console.log(ref.value);
   }
   constructor() {}
 
@@ -41,6 +41,6 @@ export class AddComponent implements OnInit, AfterContentInit {
   }
 
   ngAfterContentInit(): void {
-    console.log(this.contentDiv.nativeElement);
+    // console.log(this.contentDiv.nativeElement);
   }
 }

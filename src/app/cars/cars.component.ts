@@ -26,11 +26,11 @@ export class CarsComponent implements OnInit, AfterViewInit {
   };
 
   carWasSubmitted(carData: { name: string; color: string; model: string }) {
-    console.log(carData);
+    // console.log(carData);
   }
 
   titleCatch(title: { titles: string }) {
-    console.log(title);
+    // console.log(title);
   }
 
   constructor() {}
@@ -41,6 +41,6 @@ export class CarsComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    console.log(this.carComponent);
+    // console.log(this.carComponent);
   }
 }

@@ -8,6 +8,13 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title: string = 'car-practice';
   artist: string = 'Jon Pardi';
+
+  show: boolean = true;
+  constructor() {
+    setTimeout(() => {
+      this.show = false;
+    }, 3000);
+  }
   changeArtist() {
     this.artist = 'Riley Green';
   }
