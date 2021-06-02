@@ -19,11 +19,23 @@ export class CarsComponent implements OnInit, AfterViewInit {
 
   @ViewChild('carComponent', { static: true }) carComponent: Component;
 
-  carValue: { name: string; model: string; color: string } = {
-    name: 'Ford',
-    model: 'F-150',
-    color: 'Space Grey',
-  };
+  carValue: { name: string; model: string; color: string }[] = [
+    {
+      name: 'Ford',
+      model: 'F-150',
+      color: 'Space Grey',
+    },
+    {
+      name: 'Dodge',
+      model: 'Ram',
+      color: 'Silver',
+    },
+    {
+      name: 'Ford',
+      model: 'Raptor',
+      color: 'Black',
+    },
+  ];
 
   carWasSubmitted(carData: { name: string; color: string; model: string }) {
     // console.log(carData);

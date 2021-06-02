@@ -7,12 +7,39 @@
   </div>
 
   <hr />
-  <div class="row">
+
+  <div class="row" *ngFor="let item of list">{{ item }}</div>
+
+  <!-- <div class="row" [class]="'some-other-class'">some content!!</div>
+  <div class="row" [ngClass]="{ 'some-class': true }">some content 2!!</div> -->
+  <!-- <div class="row" [ngStyle]="{ color: 'green' }">I am a color green</div>
+  <hr />
+  <div class="row" [ngStyle]="{ color: show ? 'blue' : 'green' }">
+    I am a color green
+  </div>
+  <hr />
+  <div class="row" [ngStyle]="{ color: getColor() }">I am a color yellow</div>
+  <hr />
+  <div class="row" [style.color]="'purple'">I am a color purple</div>
+  <hr />
+  <div class="row" [ngStyle]="{ 'font-size.px': '24', color: 'red' }">
+    I am a big red
+  </div> -->
+  <!-- <div class="row">
+    <div *ngIf="show; then thenother; else other">Hello I am a div</div>
+  
+  </div>
+
+  <ng-template #thenother><div>Sorry, more here</div></ng-template>
+  <ng-template #other><div>Sorry, nothing here</div></ng-template>
+
+  <div [hidden]="show">Show this if "Show" is true</div> -->
+  <!-- <div class="row">
     <app-life *ngIf="show" [artist]="artist"></app-life>
     <div class="col-xs-12">
       <button class="btn btn-primary" (click)="changeArtist()">
         Change Artist
       </button>
     </div>
-  </div>
+  </div> -->
 </div>
