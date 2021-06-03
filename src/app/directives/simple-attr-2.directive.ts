@@ -4,6 +4,7 @@ import {
   ElementRef,
   Renderer2,
   RendererStyleFlags2,
+  HostListener,
 } from '@angular/core';
 
 @Directive({
@@ -11,7 +12,16 @@ import {
 })
 export class SimpleAttr2Directive implements OnInit {
   constructor(private el: ElementRef, private renderer: Renderer2) {}
-  ngOnInit() {
+
+  @HostListener('click') onclick() {
+    this.modifyIt();
+  }
+
+  @HostListener('mouseover') mouseOver(eventData: MouseEvent) {
+    this.renderer.setStyle(this.el.nativeElement, 'backgroundColor', 'red');
+  }
+
+  modifyIt() {
     // STYLE
     const flags = RendererStyleFlags2.DashCase | RendererStyleFlags2.Important;
     this.renderer.setStyle(this.el.nativeElement, 'color', 'blue', flags);
@@ -28,4 +38,6 @@ export class SimpleAttr2Directive implements OnInit {
     // SET ATTRIBUTE
     this.renderer.setAttribute(this.el.nativeElement, 'aria-hidden', 'true');
   }
+
+  ngOnInit() {}
 }

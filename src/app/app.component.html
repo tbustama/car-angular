@@ -8,9 +8,13 @@
 
   <hr />
 
-  <div class="row">
-    <div appSimpleAttr2>Some content</div>
+  <div class="row" *appSimpleStr1="true">
+    <div>Hello Custom Structural Directive</div>
   </div>
+
+  <!-- <div class="row">
+    <div appSimpleAttr2>Some content</div>
+  </div> -->
   <!-- <ul *ngFor="let coffee of coffees" [ngSwitch]="coffee.available">
     <li *ngSwitchCase="'Yes'">{{ coffee.style }}</li>
     <li [ngStyle]="{ color: 'red' }" *ngSwitchCase="'No'">

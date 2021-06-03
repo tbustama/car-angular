@@ -10,6 +10,7 @@ import { AddComponent } from './cars/add/add.component';
 import { LifeComponent } from './life/life.component';
 import { SimpleAttrDirective } from './directives/simple-attribute.directive';
 import { SimpleAttr2Directive } from './directives/simple-attr-2.directive';
+import { SimpleStr1Directive } from './directives/simple-str-1.directive';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,6 +21,7 @@ import { SimpleAttr2Directive } from './directives/simple-attr-2.directive';
     LifeComponent,
     SimpleAttrDirective,
     SimpleAttr2Directive,
+    SimpleStr1Directive,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],
