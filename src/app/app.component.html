@@ -8,7 +8,25 @@
 
   <hr />
 
-  <div class="row" *ngFor="let item of list">{{ item }}</div>
+  <div class="row">
+    <div appSimpleAttr2>Some content</div>
+  </div>
+  <!-- <ul *ngFor="let coffee of coffees" [ngSwitch]="coffee.available">
+    <li *ngSwitchCase="'Yes'">{{ coffee.style }}</li>
+    <li [ngStyle]="{ color: 'red' }" *ngSwitchCase="'No'">
+      {{ coffee.style }} - Not Available
+    </li>
+  </ul> -->
+
+  <!-- <div class="row">
+    <div [ngSwitch]="show">
+      <div *ngSwitchCase="true">This is showing</div>
+      <div *ngSwitchCase="false">False showing</div>
+      <div *ngSwitchDefault>Default</div>
+    </div>
+  </div> -->
+
+  <!-- <div class="row" *ngFor="let item of list">{{ item }}</div> -->
 
   <!-- <div class="row" [class]="'some-other-class'">some content!!</div>
   <div class="row" [ngClass]="{ 'some-class': true }">some content 2!!</div> -->
